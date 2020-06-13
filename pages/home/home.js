@@ -8,7 +8,6 @@ Page({
   /**
    * 页面的初始数据
    */
-  // 学到3-8
   data: {
      themeA: null,
      themeE: null,
@@ -29,15 +28,25 @@ Page({
     await theme.getThemes()
     const themeA = await theme.getHomeLocationA()
     const themeE = await theme.getHomeLocationE()
+    let themeESpu = []
+    if(themeE.online) {
+       const data = await Theme.getHomeLocationESpu()
+       if(data) {
+          themeESpu = data.spu_list.slice(0,8)
+       }
+    }
+    console.log(themeESpu)
     const bannerB = await Banner.getHomeLocationB()
     const grid = await Category.getHomeLocationC()
     const activityD = await Activity.getHomeLocationD()
     this.setData({
       themeA: themeA,
       themeE: themeE,
+      themeESpu,
       bannerB: bannerB,
       grid: grid,
       activityD: activityD
     })
+    console.log(this.data.themeE)
   }
 })
