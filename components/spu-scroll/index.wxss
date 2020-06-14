@@ -1,5 +1,44 @@
+/* 外部样式类 l-unit-class l-value-class*/
+.container {
+  padding: 42rpx 0 34rpx 28rpx;
+}
+
 .title {
     width: 692rpx;
     height: 90rpx;
 }
 
+.price-unit {
+    font-size: 26rpx !important;
+}
+
+.price-value {
+    font-size: 26rpx !important;
+}
+
+.spu-img {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.spu-container {
+    margin-right: 60rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-view {
+    margin-top: 28rpx;
+    display: flex;
+}
+
+.inner {
+    display: flex;
+}
+
+.spu-text {
+    font-size: 20rpx;
+    color: #666;
+    margin-top: 20rpx;
+}
