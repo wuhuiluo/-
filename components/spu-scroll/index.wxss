@@ -1,5 +1,6 @@
 /* 外部样式类 l-unit-class l-value-class*/
 .container {
+  background-color: #fff;
   padding: 42rpx 0 34rpx 28rpx;
 }
 

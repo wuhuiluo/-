@@ -15,9 +15,21 @@
     <image class="activity" src="{{activityD.entrance_img}}"></image>
     
     <s-spu-scroll 
+        l-class="spu-scroll"
         wx:if="{{themeE.online}}"
         theme="{{themeE}}"
         spu-list="{{themeESpu}}"
     >
     </s-spu-scroll>
+    
+    <image src="{{themeF.entrance_img}}" class="quality"></image>
+    
+    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+
+    <image src="{{themeH.entrance_img}}" class="fashion"></image>
+
+    <view class="spu-bottom">
+        <image src="/imgs/title@interest.png" class="title-spu-bottom"></image>
+        <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+    </view>
 </view>
