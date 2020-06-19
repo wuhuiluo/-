@@ -5,7 +5,7 @@ class SpuPaging {
     static getLatestPaging() {
         return new Paging({
             url: `spu/latest`
-        },3)
+        },5)
     }
     // 1. 一条数据没有 空
     // 2. 最后一页，还有没有更多数据

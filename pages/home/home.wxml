@@ -1,10 +1,13 @@
-<view>
+<l-loadmore show
+            end-text="没有商品啦*・ω・*"
+            type="{{loadingType}}">
+<view slot="content">
     <image class="top-theme" src="{{themeA.entrance_img}}"></image>
     <swiper indicator-dots
             indicator-active-color="#157658" 
             autoplay circular 
             class="swiper">
-        <block wx:key="id" wx:for="{{bannerB.items}}">
+        <block wx:for="{{bannerB.items}}" wx:key="index">
             <swiper-item>
                 <image class="swiper" src="{{item.img}}"></image>
             </swiper-item>
@@ -30,6 +33,7 @@
 
     <view class="spu-bottom">
         <image src="/imgs/title@interest.png" class="title-spu-bottom"></image>
-        <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        <l-water-flow  generic:l-water-flow-item="s-spu-preview"></l-water-flow>
     </view>
 </view>
+</l-loadmore>
