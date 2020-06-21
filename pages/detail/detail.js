@@ -1,4 +1,5 @@
 // pages/detail/detail.js
+import { Spu } from '../../model/spu'
 Page({
 
   /**
@@ -11,8 +12,10 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  async onLoad(options) {
+    const pid = options.pid
+    const spu = await Spu.getDetail(pid)
+    console.log(spu)
   },
 
   /**
