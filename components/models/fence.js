@@ -7,3 +7,7 @@ class Fence {
         this.valueTitles.push(title)
     }
 }
+
+export {
+    Fence
+}

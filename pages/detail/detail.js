@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     spu: Object
   },
 
   /**
@@ -15,7 +15,11 @@ Page({
   async onLoad(options) {
     const pid = options.pid
     const spu = await Spu.getDetail(pid)
+    console.log(pid)
     console.log(spu)
+    this.setData({
+       spu: spu
+    })
   },
 
   /**

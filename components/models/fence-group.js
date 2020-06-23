@@ -1,20 +1,33 @@
 import { Matrix } from "./matrix"
-
+import { Fence } from "./fence"
 class FenceGroup {
-    
+
     spu
     spuList = []
 
     constructor(spu) {
         this.spu = spu
-        this.spuList = spu.spu_list
+        this.skuList = spu.sku_list
     }
 
     initFences() {
-        const matrix = this._createMatrix(this.spuList)
-        matrix.forEach(element, i, j => {
-            
+        const matrix = this._createMatrix(this.skuList)
+        const fences = []
+        let currentJ = -1
+        matrix.forEach((element, i, j) => {
+            // 开启一个新列，需要创建一个新的fence
+            if (currentJ !== j) {
+                currentJ = j
+                fences[currentJ] = this._createFence(element)
+            }
+            fences[currentJ].pushValueTitle(element.value)
         })
+        console.log(fences)
+    }
+
+    _createFence() {
+        const fence = new Fence()
+        return fence
     }
 
     _createMatrix(skuList) {

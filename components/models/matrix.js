@@ -1,3 +1,4 @@
+
 class Matrix {
 
     m
@@ -17,10 +18,14 @@ class Matrix {
     forEach(cb) {
         for (let j = 0; j < this.colsNum; j++) {
             for (let i = 0; i < this.rowsNum; i++) {
-                this.element = this.m[i][j]
+                const element = this.m[i][j]
                 cb(element, i, j)
             }
         }
+    }
+
+    transpose() {
+        const desArr = []
     }
 }
 
